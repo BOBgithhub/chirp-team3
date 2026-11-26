@@ -1,12 +1,65 @@
-# Hyper Vite Starter
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hyper Vite Starter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1 id="title">Hyper Chirp</h1>
+      <form
+        id="chirp-form"
+        style="display: flex; flex-direction: column; width: 400px"
+      >
+        <div>
+          <label for="name">Name</label>
+          <input
+            id="name"
+            autocomplete="on"
+            type="text"
+            placeholder="Your name"
+            name="author_name"
+          />
+        </div>
+        <div>
+          <label for="content">Content</label>
+          <textarea
+            id="content"
+            placeholder="Write your message"
+            name="content"
+            maxlength="280"
+            required
+          ></textarea>
+        </div>
+        <div>
+          <label for="tag">Tag</label>
+          <input id="tag" type="text" name="tag" placeholder="FED28" />
+        </div>
+        <div>
+          <label for="sentiment">Sentiment</label>
+          <select id="sentiment" type="select" name="sentiment">
+            <option value="Chaotic">Chaotic</option>
+            <option value="Neutral">Neutral</option>
+            <option value="Positive">Positive</option>
+            <option value="Negative">Negative</option>
+          </select>
+        </div>
+        <div class="checkbox-group">
+          <label for="is_anonymous">Anonymous?</label>
+          <input id="is_anonymous" type="checkbox" name="is_anonymous" />
+        </div>
 
-Run these commands from this directory.
-
-```sh
-npm ci
-npm run dev
-```
-
-Open the local URL Vite prints. Edit `index.html` for markup and `main.js` for JavaScript.
-
-`npm run build` creates the site in `dist/`. Run `npm run preview` to serve that build locally.
+        <button type="submit" class="btn">Post chirp</button>
+      </form>
+      <div class="container">
+        <button class="load-data btn">Load Chirps</button>
+        <div class="chirps">
+          <span style="opacity: 0" class="loader">Loading...</span>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

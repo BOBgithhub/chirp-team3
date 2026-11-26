@@ -1,0 +1,106 @@
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form {
+  gap: 10px;
+  padding: 15px;
+  border: 1px solid darkgray;
+  border-radius: 20px;
+  button.btn {
+    background-color: rgb(209, 219, 219);
+    max-width: 100%;
+  }
+}
+
+form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkbox-group label {
+  order: 2;
+}
+.checkbox-group input {
+  max-width: fit-content;
+  order: 1;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+button.btn {
+  width: 100%;
+  max-width: 200px;
+  margin: 20px auto;
+  display: block;
+  height: 30px;
+  border-radius: 20px;
+  background-color: rgb(136, 150, 150);
+}
+
+.chirps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.chirp {
+  padding: 20px;
+  border: 1px solid darkgray;
+  border-radius: 20px;
+  button {
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
+  }
+}
+
+.pills-group {
+  display: flex;
+  gap: 10px;
+  margin: 1em 0;
+  font-size: 16px;
+}
+
+.tag {
+  border-radius: 20px;
+  padding: 10px;
+  background-color: beige;
+  border: 1px solid grey;
+}
+
+.sentiment {
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid grey;
+}
+
+.chaotic {
+  background-color: rgb(243, 195, 243);
+}
+
+.negative {
+  background-color: rgb(77, 59, 77);
+  color: beige;
+}
+
+.neutral {
+  background-color: rgb(181, 180, 181);
+}
+
+.positive {
+  background-color: rgb(168 230 114 / 77%);
+}
